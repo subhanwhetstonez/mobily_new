@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FiberNetwork = () => {
+const KSA = () => {
   return (
     <div className='bg-[#EDF7FF] w-[100%] font-bold flex flex-col p-[5%] '>
     <div className='text-[#005FA6] text-[36px] mb-4'>Terrestrial & Cross Borders</div>
@@ -14,4 +14,4 @@ const FiberNetwork = () => {
   )
 }
 
-export default FiberNetwork
+export default KSA

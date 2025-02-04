@@ -6,3 +6,21 @@
 body {
   font-family: Poppins;
 }
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1 !important;
+  border-radius: 100px !important;
+  cursor: pointer !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(236deg, #75C3FF 20%, #050e59 100%);
+  border-radius: 100px !important;
+  cursor: pointer !important;
+}

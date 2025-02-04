@@ -1,5 +1,5 @@
 import React from "react";
-import AnimatedDiv from "./AnimatedDiv";
+import AnimatedDiv from "../testpages/AnimatedDiv";
 
 const Africa1 = () => {
   return (

@@ -3,7 +3,21 @@
 import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import DataCenter from "./DataCenter";
+import Tower from "./tower";
+import InternetExchange from "./internetExchnage";
+import GlobalPoints from "./globalPoints";
+import KSA from "./ksaTerrestrial";
+import BorderPage from "./borderInterconnectPoint";
+import LandingStation from "./landingStation";
+import EcoSystem from "./exchnageEcosystem";
 import SubmarineCableSystem from "./SubmarineCableSystem";
+import AAE1Cable from "./AAE1Cable";
+import Africa1 from "./Africa1";
+import TGNAsia from "./TGNAsia";
+import SMW from "./SMW";
+import TGNCable from "./TGNCable";
+import RCN from "./RCN";
+import MobileCable from "./MobileCable";
 
 const ViewScreen = () => {
   const [socket, setSocket] = useState(null);
@@ -25,40 +39,89 @@ const ViewScreen = () => {
   }, [currentPage]);
 
   const pageComponents = {
-    "/terrestrial-cross-borders": (
+    "/terrestrial-ksa": (
       <div>
-       <FiberNetwork />
+        <KSA />
       </div>
     ),
-    "/data-centers": <div>Data Center</div>,
+    "/terrestrial-border": (
+      <div>
+        <BorderPage />
+      </div>
+    ),
+    "/data-centers": (
+      <div>
+        <DataCenter />
+      </div>
+    ),
     "/landing-stations": (
       <div>
-        <div>Landing Stations</div>
-      </div>
-    ),
-    "/global-points": (
-      <div>
-        <div>Global Points of Presence</div>
+        <LandingStation />
       </div>
     ),
     "/towers": (
       <div>
-               <Tower />
+        <Tower />
       </div>
     ),
-    "/equinix-jeddah": (
+    "/global-points": (
       <div>
-               <GlobalPoints />
+        <GlobalPoints />
       </div>
     ),
-    "/submarine-cables": (
+    "/jedddah_exchange-internet": (
+      <div>
+        <InternetExchange />
+      </div>
+    ),
+    "/jedddah_exchange-ecosystem": (
+      <div>
+        <EcoSystem />
+      </div>
+    ),
+    "/towers": (
+      <div>
+        <Tower />
+      </div>
+    ),
+    "/submarine-home": (
       <div>
         <SubmarineCableSystem />
       </div>
     ),
-    "/internet-gateways": (
+    "/submarine-aae1": (
       <div>
-        <div>Internet Gateways</div>
+        <AAE1Cable />
+      </div>
+    ),
+    "/submarine-africa1": (
+      <div>
+        <Africa1 />
+      </div>
+    ),
+    "/submarine-eurasia": (
+      <div>
+        <TGNAsia />
+      </div>
+    ),
+    "/submarine-smw": (
+      <div>
+        <SMW />
+      </div>
+    ),
+    "/submarine-tgn": (
+      <div>
+        <TGNCable />
+      </div>
+    ),
+    "/submarine-rcn": (
+      <div>
+        <RCN />
+      </div>
+    ),
+    "/submarine-mobily": (
+      <div>
+        <MobileCable />
       </div>
     ),
   };
