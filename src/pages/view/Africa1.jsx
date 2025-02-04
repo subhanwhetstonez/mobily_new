@@ -8,17 +8,17 @@ const Africa1 = () => {
         <div>
           <p className="text-[#005FA6] text-[2vw] font-[700] ">Africa1 (New)</p>
         </div>
-        <div className="grid grid-cols-2 gap-4 ">
-          <div>
+        <div className="grid grid-cols-3 gap-4 ">
+          <div className="col-span-1">
             <AnimatedDiv title={"10,000 Km"} subtitle={"Submarine Cable"} />
           </div>
-          <div>
+          <div className="col-span-2">
             <AnimatedDiv
               title={"60 Tbps"}
               subtitle={"Initial System Design Capacity"}
             />
           </div>
-          <div>
+          <div className="col-span-2">
             <AnimatedDiv
               title={"200 Gbps"}
               subtitle={"Wave Length Techmology"}
