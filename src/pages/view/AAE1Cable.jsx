@@ -1,5 +1,5 @@
 import React from "react";
-import AnimatedDiv from "../testpages/AnimatedDiv";
+import AnimatedDiv from "../components/AnimatedDiv";
 
 const AAE1Cable = () => {
   return (

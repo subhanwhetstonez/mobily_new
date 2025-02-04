@@ -34,25 +34,18 @@ export default function Home() {
     }
   };
   return (
-    <div className="flex justify-between items-center w-full h-[100vh] bg-[#050e59] text-white p-20"
-      style={{
-        backgroundImage: 'url("/menuicon/menu.gif")',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-      }}
-    >
-      <div className="ml-28 overflow-y-auto flex items-center h-full">
+    <div className="flex justify-between items-center w-full h-[100vh] bg-[#050e59] text-white p-20">
+      <div className="ml-28 overflow-y-auto flex items-center h-full z-10">
         <div className="flex flex-col w-full gap-[20px]">
-          <div className="text-[32px] flex gap-[8px] cursor-pointer relative items-center" onClick={() => handleDropdownToggle('terrestrial')}
+          <div
+            className="text-[32px] flex gap-[8px] cursor-pointer relative items-center"
+            onClick={() => handleDropdownToggle("terrestrial")}
           >
-            <img src="/menuicon/map.svg" alt="map icon" className="w-[60px]" /> <span className="ml-2 w-[450px]">Terrestrial & Cross Borders</span>
-            <button
-            >
-              {activeDropdown === 'terrestrial' ? '▼' : '▲'}
-            </button>
+            <img src="/menuicon/map.svg" alt="map icon" className="w-[60px]" />{" "}
+            <span className="ml-2 w-[450px]">Terrestrial & Cross Borders</span>
+            <button>{activeDropdown === "terrestrial" ? "▼" : "▲"}</button>
           </div>
-          {activeDropdown === 'terrestrial' && (
+          {activeDropdown === "terrestrial" && (
             <div className="pl-[40px] mt-2 p-2 rounded transition-all duration-300 ease-in-out ml-[60px]">
               <div
                 className="text-[24px] cursor-pointer mb-4"
@@ -72,50 +65,57 @@ export default function Home() {
             className="text-[32px] flex gap-[8px] cursor-pointer items-center"
             onClick={() => handleMenuClick("/data-centers")}
           >
-            <img src="/menuicon/datacenter.svg" alt="data center" className="w-[60px]" />
-            <span className="ml-2 w-[450px]">
-              Data Centers
-            </span>
+            <img
+              src="/menuicon/datacenter.svg"
+              alt="data center"
+              className="w-[60px]"
+            />
+            <span className="ml-2 w-[450px]">Data Centers</span>
           </div>
           <div
             className="text-[32px] flex gap-[8px] cursor-pointer items-center"
             onClick={() => handleMenuClick("/landing-stations")}
           >
-            <img src="/menuicon/landingstation.svg" alt="landing station" className="w-[60px]" />
-            <span className="ml-2 w-[450px]">
-              Landing Stations
-            </span>
+            <img
+              src="/menuicon/landingstation.svg"
+              alt="landing station"
+              className="w-[60px]"
+            />
+            <span className="ml-2 w-[450px]">Landing Stations</span>
           </div>
           <div
             className="text-[32px] flex gap-[8px] cursor-pointer items-center"
             onClick={() => handleMenuClick("/global-points")}
           >
-            <img src="/menuicon/globalpoints.svg" alt="global points" className="w-[60px]" />
-            <span className="ml-2 w-[450px]">
-              Global Points of Presence
-            </span>
+            <img
+              src="/menuicon/globalpoints.svg"
+              alt="global points"
+              className="w-[60px]"
+            />
+            <span className="ml-2 w-[450px]">Global Points of Presence</span>
           </div>
           <div
             className="text-[32px] flex gap-[8px] cursor-pointer items-center"
             onClick={() => handleMenuClick("/towers")}
           >
             <img src="/menuicon/towers.svg" alt="towers" className="w-[60px]" />
-            <span className="ml-2 w-[450px]">
-              Towers
-            </span>
+            <span className="ml-2 w-[450px]">Towers</span>
           </div>
-          <div className="text-[32px] flex gap-[8px] cursor-pointer relative items-center" onClick={() => handleDropdownToggle('jedddah_exchange')}
+          <div
+            className="text-[32px] flex gap-[8px] cursor-pointer relative items-center"
+            onClick={() => handleDropdownToggle("jedddah_exchange")}
           >
-            <img src="/menuicon/equinix.svg" alt="equinix" className="w-[60px]" />
+            <img
+              src="/menuicon/equinix.svg"
+              alt="equinix"
+              className="w-[60px]"
+            />
             <span className="ml-2 w-[450px]">
               Equinix Jeddah Internet Exchange
             </span>
-            <button
-            >
-              {activeDropdown === 'jedddah_exchange' ? '▼' : '▲'}
-            </button>
+            <button>{activeDropdown === "jedddah_exchange" ? "▼" : "▲"}</button>
           </div>
-          {activeDropdown === 'jedddah_exchange' && (
+          {activeDropdown === "jedddah_exchange" && (
             <div className="pl-[40px] mt-2 p-2 rounded transition-all duration-300 ease-in-out ml-[60px]">
               <div
                 className="text-[24px] cursor-pointer mb-4"
@@ -132,18 +132,19 @@ export default function Home() {
             </div>
           )}
 
-          <div className="text-[32px] flex gap-[8px] cursor-pointer relative items-center" onClick={() => handleDropdownToggle('submarine')}
+          <div
+            className="text-[32px] flex gap-[8px] cursor-pointer relative items-center"
+            onClick={() => handleDropdownToggle("submarine")}
           >
-            <img src="/menuicon/submarine.svg" alt="equinix" className="w-[60px]" />
-            <span className="ml-2 w-[450px]">
-              Submarine Cable System
-            </span>
-            <button
-            >
-              {activeDropdown === 'submarine' ? '▼' : '▲'}
-            </button>
+            <img
+              src="/menuicon/submarine.svg"
+              alt="equinix"
+              className="w-[60px]"
+            />
+            <span className="ml-2 w-[450px]">Submarine Cable System</span>
+            <button>{activeDropdown === "submarine" ? "▼" : "▲"}</button>
           </div>
-          {activeDropdown === 'submarine' && (
+          {activeDropdown === "submarine" && (
             <div className="pl-[40px] mt-2 p-2 rounded transition-all duration-300 ease-in-out ml-[60px]">
               <div
                 className="text-[24px] cursor-pointer mb-4"
@@ -178,7 +179,6 @@ export default function Home() {
                 {"SMW6"}
               </div>
 
-
               <div
                 className="text-[24px] cursor-pointer mb-4"
                 onClick={() => handleMenuClick("/submarine-tgn")}
@@ -206,12 +206,19 @@ export default function Home() {
             className="text-[32px] flex gap-[8px] cursor-pointer items-center"
             onClick={() => handleMenuClick("/internet-gateways")}
           >
-            <img src="/menuicon/internet.svg" alt="internet gateways" className="w-[60px]" />
-            <span className="ml-2 w-[450px]">
-              Internet Gateways
-            </span>
+            <img
+              src="/menuicon/internet.svg"
+              alt="internet gateways"
+              className="w-[60px]"
+            />
+            <span className="ml-2 w-[450px]">Internet Gateways</span>
           </div>
         </div>
+      </div>
+      <div className="absolute bottom-0 right-0">
+        <video autoPlay loop playsInline muted>
+          <source src="/bgvideo.mp4" />
+        </video>
       </div>
     </div>
   );
