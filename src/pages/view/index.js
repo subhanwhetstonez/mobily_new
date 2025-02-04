@@ -3,6 +3,11 @@
 import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import DataCenter from "./DataCenter";
+import FiberNetwork from "./ksaTerrestrial";
+import FiberNetwork1 from "./borderInterconnectPoint";
+import Tower from "./tower";
+import InternetExchange from "./internetExchnage";
+import GlobalPoints from "./globalPoints";
 
 const ViewScreen = () => {
   const [socket, setSocket] = useState(null);
@@ -26,7 +31,7 @@ const ViewScreen = () => {
   const pageComponents = {
     "/terrestrial-cross-borders": (
       <div>
-        <div className="text-black">Terrestrial & Cross Borders</div>
+       <FiberNetwork />
       </div>
     ),
     "/data-centers": (
@@ -46,12 +51,12 @@ const ViewScreen = () => {
     ),
     "/towers": (
       <div>
-        <div>Towers</div>
+               <Tower />
       </div>
     ),
     "/equinix-jeddah": (
       <div>
-        <div>Equinix Jeddah Internet Exchange</div>
+               <GlobalPoints />
       </div>
     ),
     "/submarine-cables": (
