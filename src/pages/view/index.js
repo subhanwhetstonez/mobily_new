@@ -3,11 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import DataCenter from "./DataCenter";
-import FiberNetwork from "./ksaTerrestrial";
-import FiberNetwork1 from "./borderInterconnectPoint";
-import Tower from "./tower";
-import InternetExchange from "./internetExchnage";
-import GlobalPoints from "./globalPoints";
+import SubmarineCableSystem from "./SubmarineCableSystem";
 
 const ViewScreen = () => {
   const [socket, setSocket] = useState(null);
@@ -34,11 +30,7 @@ const ViewScreen = () => {
        <FiberNetwork />
       </div>
     ),
-    "/data-centers": (
-      <div>
-        <DataCenter />
-      </div>
-    ),
+    "/data-centers": <div>Data Center</div>,
     "/landing-stations": (
       <div>
         <div>Landing Stations</div>
@@ -61,7 +53,7 @@ const ViewScreen = () => {
     ),
     "/submarine-cables": (
       <div>
-        <div>Submarine Cable Systems</div>
+        <SubmarineCableSystem />
       </div>
     ),
     "/internet-gateways": (
