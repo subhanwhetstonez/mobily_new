@@ -7,7 +7,7 @@ const BorderPage = () => {
         Terrestrial & Cross Borders
       </div>
       <div
-        className="text-[#005FA6] w-[320px] h-[90px] bg-[#FFFFFF] text-[24px] font-semibold 
+        className="text-[#005FA6] w-[350px] h-[90px] bg-[#FFFFFF] text-[24px] font-semibold 
                     flex items-center justify-center mb-10"
       >
         Border Interconnect Point

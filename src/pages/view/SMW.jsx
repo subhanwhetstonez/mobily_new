@@ -8,11 +8,11 @@ const SMW = () => {
         <div>
           <p className="text-[#005FA6] text-[2vw] font-[700] ">SMW6 (New)</p>
         </div>
-        <div className="grid grid-cols-2 gap-4 ">
-          <div>
+        <div className="grid grid-cols-3 gap-4 ">
+          <div className="col-span-1">
             <AnimatedDiv title={"19,200 Km"} subtitle={"Submarine Cable"} />
           </div>
-          <div>
+          <div className="col-span-2">
             <AnimatedDiv
               title={"120 Tbps"}
               subtitle={"Initial System Design Capacity"}

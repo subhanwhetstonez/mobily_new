@@ -3,7 +3,7 @@ import React from "react";
 const RCN = () => {
   return (
     <div>
-      <div className="absolute flex flex-col gap-14 px-[4vw] pt-[6vw] bg-[#edf7ff]">
+      <div className="absolute flex flex-col gap-14 px-[4vw] pt-[6vw] ">
         <div>
           <p className="text-[#005FA6] text-[2vw] font-[700] ">RCN</p>
         </div>

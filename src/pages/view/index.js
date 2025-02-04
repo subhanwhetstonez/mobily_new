@@ -20,6 +20,12 @@ import RCN from "./RCN";
 import MobileCable from "./MobileCable";
 import InternetGateways from "./InternetGateway";
 
+const DefaultScreen = () => (
+  <div className="flex flex-col items-center justify-center h-screen bg-[#edf7ff]">
+    <p className="text-lg text-gray-600 mt-2">Waiting for content.</p>
+  </div>
+);
+
 const ViewScreen = () => {
   const [socket, setSocket] = useState(null);
   const [currentPage, setCurrentPage] = useState("/view");
@@ -42,99 +48,26 @@ const ViewScreen = () => {
   }, [currentPage]);
 
   const pageComponents = {
-    "/terrestrial-ksa": (
-      <div>
-        <KSA />
-      </div>
-    ),
-    "/terrestrial-border": (
-      <div>
-        <BorderPage />
-      </div>
-    ),
-    "/data-centers": (
-      <div>
-        <DataCenter />
-      </div>
-    ),
-    "/landing-stations": (
-      <div>
-        <LandingStation />
-      </div>
-    ),
-    "/towers": (
-      <div>
-        <Tower />
-      </div>
-    ),
-    "/global-points": (
-      <div>
-        <GlobalPoints />
-      </div>
-    ),
-    "/jedddah_exchange-internet": (
-      <div>
-        <InternetExchange />
-      </div>
-    ),
-    "/jedddah_exchange-ecosystem": (
-      <div>
-        <EcoSystem />
-      </div>
-    ),
-    "/towers": (
-      <div>
-        <Tower />
-      </div>
-    ),
-    "/submarine-home": (
-      <div>
-        <SubmarineCableSystem />
-      </div>
-    ),
-    "/submarine-aae1": (
-      <div>
-        <AAE1Cable />
-      </div>
-    ),
-    "/submarine-africa1": (
-      <div>
-        <Africa1 />
-      </div>
-    ),
-    "/submarine-eurasia": (
-      <div>
-        <TGNAsia />
-      </div>
-    ),
-    "/submarine-smw": (
-      <div>
-        <SMW />
-      </div>
-    ),
-    "/submarine-tgn": (
-      <div>
-        <TGNCable />
-      </div>
-    ),
-    "/submarine-rcn": (
-      <div>
-        <RCN />
-      </div>
-    ),
-    "/submarine-mobily": (
-      <div>
-        <MobileCable />
-      </div>
-    ),
-    "/internet-gateways": (
-      <div>
-        <InternetGateways />
-      </div>
-    ),
+    "/terrestrial-ksa": <KSA />,
+    "/terrestrial-border": <BorderPage />,
+    "/data-centers": <DataCenter />,
+    "/landing-stations": <LandingStation />,
+    "/towers": <Tower />,
+    "/global-points": <GlobalPoints />,
+    "/jedddah_exchange-internet": <InternetExchange />,
+    "/jedddah_exchange-ecosystem": <EcoSystem />,
+    "/submarine-home": <SubmarineCableSystem />,
+    "/submarine-aae1": <AAE1Cable />,
+    "/submarine-africa1": <Africa1 />,
+    "/submarine-eurasia": <TGNAsia />,
+    "/submarine-smw": <SMW />,
+    "/submarine-tgn": <TGNCable />,
+    "/submarine-rcn": <RCN />,
+    "/submarine-mobily": <MobileCable />,
+    "/internet-gateways": <InternetGateways />,
   };
 
-  return <div>{pageComponents[currentPage]}</div>;
+  return <div>{pageComponents[currentPage] || <DefaultScreen />}</div>;
 };
 
 export default ViewScreen;

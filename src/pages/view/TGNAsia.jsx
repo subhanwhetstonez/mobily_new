@@ -8,7 +8,7 @@ const TGNAsia = () => {
         <div>
           <p className="text-[#005FA6] text-[2vw] font-[700] ">TGN-Euro Asia</p>
         </div>
-        <div className="grid grid-cols-2 gap-4 ">
+        <div className="grid grid-cols-3 gap-4 ">
           <div>
             <AnimatedDiv title={"15,000 Km"} subtitle={"Submarine Cable"} />
           </div>
