@@ -27,7 +27,9 @@ const MobileCable = () => {
         </div>
       </div>
       <div className="flex justify-end">
-        <img src="/pages/mobilecablemap.svg" width={"100%"} />
+        <video autoPlay loop muted playsInline>
+          <source src="/pages/005.mp4" />
+        </video>
       </div>
     </div>
   );
