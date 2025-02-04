@@ -10,6 +10,11 @@ const poppins = Poppins({
 
 export default function Home() {
   const [socket, setSocket] = useState(null);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const handleDropdownToggle = (menu) => {
+    setActiveDropdown(activeDropdown === menu ? null : menu);
+  };
 
   useEffect(() => {
     const socketInstance = io("http://192.168.0.109:8080");
@@ -29,62 +34,190 @@ export default function Home() {
     }
   };
   return (
-    <div className="flex justify-between w-full h-[100vh] bg-[#050e59] text-white">
-      <div className="relative z-10 p-28">
-        <ul className="flex flex-col w-full gap-[20px]">
-          <li
-            className="text-[32px] flex gap-[8px] cursor-pointer"
-            onClick={() => handleMenuClick("/terrestrial-cross-borders")}
+    <div className="flex justify-between items-center w-full h-[100vh] bg-[#050e59] text-white p-20">
+      <div className="ml-28 overflow-y-auto flex items-center h-full z-10">
+        <div className="flex flex-col w-full gap-[20px]">
+          <div
+            className="text-[32px] flex gap-[8px] cursor-pointer relative items-center"
+            onClick={() => handleDropdownToggle("terrestrial")}
           >
-            <img src="/menuicon/map.svg" /> Terrestrial & Cross Borders
-          </li>
-          <li
-            className="text-[32px] flex gap-[8px] cursor-pointer"
+            <img src="/menuicon/map.svg" alt="map icon" className="w-[60px]" />{" "}
+            <span className="ml-2 w-[450px]">Terrestrial & Cross Borders</span>
+            <button>{activeDropdown === "terrestrial" ? "▼" : "▲"}</button>
+          </div>
+          {activeDropdown === "terrestrial" && (
+            <div className="pl-[40px] mt-2 p-2 rounded transition-all duration-300 ease-in-out ml-[60px]">
+              <div
+                className="text-[24px] cursor-pointer mb-4"
+                onClick={() => handleMenuClick("/terrestrial-ksa")}
+              >
+                {"KSA Terrestrial"}
+              </div>
+              <div
+                className="text-[24px] cursor-pointer"
+                onClick={() => handleMenuClick("/terrestrial-border")}
+              >
+                {"Border Interconnect Point"}
+              </div>
+            </div>
+          )}
+          <div
+            className="text-[32px] flex gap-[8px] cursor-pointer items-center"
             onClick={() => handleMenuClick("/data-centers")}
           >
-            <img src="/menuicon/datacenter.svg" /> Data Centers
-          </li>
-          <li
-            className="text-[32px] flex gap-[8px] cursor-pointer"
+            <img
+              src="/menuicon/datacenter.svg"
+              alt="data center"
+              className="w-[60px]"
+            />
+            <span className="ml-2 w-[450px]">Data Centers</span>
+          </div>
+          <div
+            className="text-[32px] flex gap-[8px] cursor-pointer items-center"
             onClick={() => handleMenuClick("/landing-stations")}
           >
-            <img src="/menuicon/landingstation.svg" /> Landing Stations
-          </li>
-          <li
-            className="text-[32px] flex gap-[8px] cursor-pointer"
+            <img
+              src="/menuicon/landingstation.svg"
+              alt="landing station"
+              className="w-[60px]"
+            />
+            <span className="ml-2 w-[450px]">Landing Stations</span>
+          </div>
+          <div
+            className="text-[32px] flex gap-[8px] cursor-pointer items-center"
             onClick={() => handleMenuClick("/global-points")}
           >
-            <img src="/menuicon/globalpoints.svg" /> Global Points of Presence
-          </li>
-          <li
-            className="text-[32px] flex gap-[8px] cursor-pointer"
+            <img
+              src="/menuicon/globalpoints.svg"
+              alt="global points"
+              className="w-[60px]"
+            />
+            <span className="ml-2 w-[450px]">Global Points of Presence</span>
+          </div>
+          <div
+            className="text-[32px] flex gap-[8px] cursor-pointer items-center"
             onClick={() => handleMenuClick("/towers")}
           >
-            <img src="/menuicon/towers.svg" /> Towers
-          </li>
-          <li
-            className="text-[32px] flex gap-[8px] cursor-pointer"
-            onClick={() => handleMenuClick("/equinix-jeddah")}
+            <img src="/menuicon/towers.svg" alt="towers" className="w-[60px]" />
+            <span className="ml-2 w-[450px]">Towers</span>
+          </div>
+          <div
+            className="text-[32px] flex gap-[8px] cursor-pointer relative items-center"
+            onClick={() => handleDropdownToggle("jedddah_exchange")}
           >
-            <img src="/menuicon/equinix.svg" /> Equinix Jeddah Internet Exchange
-          </li>
-          <li
-            className="text-[32px] flex gap-[8px] cursor-pointer"
-            onClick={() => handleMenuClick("/submarine-cables")}
+            <img
+              src="/menuicon/equinix.svg"
+              alt="equinix"
+              className="w-[60px]"
+            />
+            <span className="ml-2 w-[450px]">
+              Equinix Jeddah Internet Exchange
+            </span>
+            <button>{activeDropdown === "jedddah_exchange" ? "▼" : "▲"}</button>
+          </div>
+          {activeDropdown === "jedddah_exchange" && (
+            <div className="pl-[40px] mt-2 p-2 rounded transition-all duration-300 ease-in-out ml-[60px]">
+              <div
+                className="text-[24px] cursor-pointer mb-4"
+                onClick={() => handleMenuClick("/jedddah_exchange-internet")}
+              >
+                {"Internet Exchange"}
+              </div>
+              <div
+                className="text-[24px] cursor-pointer"
+                onClick={() => handleMenuClick("/jedddah_exchange-ecosystem")}
+              >
+                {"Exchange Ecosystem"}
+              </div>
+            </div>
+          )}
+
+          <div
+            className="text-[32px] flex gap-[8px] cursor-pointer relative items-center"
+            onClick={() => handleDropdownToggle("submarine")}
           >
-            <img src="/menuicon/submarine.svg" /> Submarine Cable Systems
-          </li>
-          <li
-            className="text-[32px] flex gap-[8px] cursor-pointer"
+            <img
+              src="/menuicon/submarine.svg"
+              alt="equinix"
+              className="w-[60px]"
+            />
+            <span className="ml-2 w-[450px]">Submarine Cable System</span>
+            <button>{activeDropdown === "submarine" ? "▼" : "▲"}</button>
+          </div>
+          {activeDropdown === "submarine" && (
+            <div className="pl-[40px] mt-2 p-2 rounded transition-all duration-300 ease-in-out ml-[60px]">
+              <div
+                className="text-[24px] cursor-pointer mb-4"
+                onClick={() => handleMenuClick("/submarine-home")}
+              >
+                {"Home"}
+              </div>
+              <div
+                className="text-[24px] cursor-pointer mb-4"
+                onClick={() => handleMenuClick("/submarine-aae1")}
+              >
+                {"AAE1 Cable"}
+              </div>
+              <div
+                className="text-[24px] cursor-pointer mb-4"
+                onClick={() => handleMenuClick("/submarine-africa1")}
+              >
+                {"Africa1"}
+              </div>
+
+              <div
+                className="text-[24px] cursor-pointer mb-4"
+                onClick={() => handleMenuClick("/submarine-eurasia")}
+              >
+                {"TGN – Eurasia Cable"}
+              </div>
+
+              <div
+                className="text-[24px] cursor-pointer mb-4"
+                onClick={() => handleMenuClick("/submarine-smw")}
+              >
+                {"SMW6"}
+              </div>
+
+              <div
+                className="text-[24px] cursor-pointer mb-4"
+                onClick={() => handleMenuClick("/submarine-tgn")}
+              >
+                {"TGN-Gulf Cable"}
+              </div>
+
+              <div
+                className="text-[24px] cursor-pointer mb-4"
+                onClick={() => handleMenuClick("/submarine-rcn")}
+              >
+                {"RCN"}
+              </div>
+
+              <div
+                className="text-[24px] cursor-pointer mb-4"
+                onClick={() => handleMenuClick("/submarine-mobily")}
+              >
+                {"Mobily New Cable"}
+              </div>
+            </div>
+          )}
+
+          <div
+            className="text-[32px] flex gap-[8px] cursor-pointer items-center"
             onClick={() => handleMenuClick("/internet-gateways")}
           >
-            <img src="/menuicon/internet.svg" /> Internet Gateways
-          </li>
-        </ul>
+            <img
+              src="/menuicon/internet.svg"
+              alt="internet gateways"
+              className="w-[60px]"
+            />
+            <span className="ml-2 w-[450px]">Internet Gateways</span>
+          </div>
+        </div>
       </div>
-      <div className="absolute right-0 bottom-0">
+      <div className="absolute bottom-0 right-0">
         <video autoPlay loop playsInline muted>
-          <source src="/bgvideo.mp4" type="video/mp4" />
+          <source src="/bgvideo.mp4" />
         </video>
       </div>
     </div>

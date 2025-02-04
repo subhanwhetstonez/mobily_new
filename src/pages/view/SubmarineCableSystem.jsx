@@ -6,7 +6,7 @@ const SubmarineCableSystem = () => {
       <div>
         <img src="/pages/submarinecablemap.svg" width={"100%"} />
       </div>
-      <div className="flex w-full justify-between px-[5%] pb-[4%] items-center justify-center">
+      <div className="flex w-full justify-between px-[5%] pb-[4%] items-center">
         <div>
           <p className="text-[3vw] text-[#005FA6] font-[700]">
             Submarine Cable <br /> Systems
@@ -24,7 +24,7 @@ const SubmarineCableSystem = () => {
           <div className="flex bg-[#62B9441A] py-[1%] px-[3%] rounded-[8px] items-center gap-[10px]">
             <div className="w-[3.1vw] h-[6vh] bg-[#62B944] rounded-[8%]"></div>
             <p className="text-[#62B944] text-[1.3vw] font-[700]">
-              TGN – Eurasia Cable
+              TGN-Eurasia Cable
             </p>
           </div>
           <div className="flex bg-[#B7B4CE1A] py-[1%] px-[3%] rounded-[8px] items-center gap-[10px]">
@@ -34,19 +34,17 @@ const SubmarineCableSystem = () => {
           <div className="flex bg-[#BFDEAA1A] py-[1%] px-[3%] rounded-[8px] items-center gap-[10px]">
             <div className="w-[3.1vw] h-[6vh] bg-[#9EC385] rounded-[8%]"></div>
             <p className="text-[#9EC385] text-[1.3vw] font-[700]">
-              TGN – Eurasia Cable
+              TGN-Gulf Cable
             </p>
           </div>
           <div className="flex bg-[#845EC21A] py-[1%] px-[3%] rounded-[8px] items-center gap-[10px]">
             <div className="w-[3.1vw] h-[6vh] bg-[#845EC2] rounded-[8%]"></div>
-            <p className="text-[#845EC2] text-[1.3vw] font-[700]">
-              TGN – Eurasia Cable
-            </p>
+            <p className="text-[#845EC2] text-[1.3vw] font-[700]">RCN</p>
           </div>
           <div className="flex col-span-2 bg-[#121E631A] py-[1%] px-[1.4%] rounded-[8px] items-center gap-[10px]">
             <div className="w-[3.1vw] h-[6vh] bg-[#121E63] rounded-[8%]"></div>
             <p className="text-[#121E63] text-[1.3vw] font-[700]">
-              TGN – Eurasia Cable
+              Mobily New Cable
             </p>
           </div>
         </div>
