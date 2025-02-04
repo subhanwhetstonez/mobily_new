@@ -83,7 +83,7 @@ export default function Home() {
         </ul>
       </div>
       <div className="absolute right-0 bottom-0">
-        <video autoPlay loop playsInline controls>
+        <video autoPlay loop playsInline>
           <source src="/bgvideo.mp4" type="video/mp4" />
         </video>
       </div>
