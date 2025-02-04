@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
+import DataCenter from "./DataCenter";
 
 const ViewScreen = () => {
   const [socket, setSocket] = useState(null);
@@ -30,7 +31,7 @@ const ViewScreen = () => {
     ),
     "/data-centers": (
       <div>
-        <div>Data Center</div>
+        <DataCenter />
       </div>
     ),
     "/landing-stations": (
