@@ -10,7 +10,7 @@ const MobileCable = () => {
           </p>
         </div>
         <div className="grid gap-6 ">
-          <p className="text-[#005FA6] text-[1.6vw] font-[500] ">
+          <p className="text-[#005FA6] text-[1.6vw] font-[700] ">
             Mobily’s new subsea <br /> crossing the Red Sea
           </p>
           <p className="text-[#001424] text-[1vw] font-[400] ">
@@ -26,8 +26,8 @@ const MobileCable = () => {
           </p>
         </div>
       </div>
-      <div className=" flex justify-end">
-        <img src="/pages/mobilecablemap.svg" width={"37%"} />
+      <div className="flex justify-end">
+        <img src="/pages/mobilecablemap.svg" width={"100%"} />
       </div>
     </div>
   );
