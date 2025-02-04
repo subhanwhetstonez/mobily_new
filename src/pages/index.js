@@ -17,8 +17,10 @@ export default function Home() {
   };
 
   useEffect(() => {
-    const socketInstance = io("http://192.168.0.109:8080");
-    setSocket(socketInstance);
+    const socketInstance = io("https://mobily-backend-production.up.railway.app/", {
+      transports: ["websocket", "polling"], // Allow WebSocket and polling
+      withCredentials: true, // Ensures CORS works properly
+    }); setSocket(socketInstance);
 
     return () => {
       socketInstance.disconnect();
