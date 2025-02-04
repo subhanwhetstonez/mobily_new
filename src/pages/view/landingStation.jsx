@@ -11,7 +11,7 @@ const LandingStation = () => {
         subtitle={"Landing station in the kingdom"}
       />
       <img
-        src="/pages/LandingStation.svg"
+        src="/pages/landingStation.svg"
         className="flex items-center justify-center"
       />
     </div>

@@ -20,11 +20,47 @@ import RCN from "./RCN";
 import MobileCable from "./MobileCable";
 import InternetGateways from "./InternetGateway";
 
-const DefaultScreen = () => (
-  <div className="flex flex-col items-center justify-center h-screen bg-[#edf7ff]">
-    <p className="text-lg text-gray-600 mt-2">Waiting for content.</p>
-  </div>
-);
+const DefaultScreen = () => {
+  const [socket, setSocket] = useState(null);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const handleDropdownToggle = (menu) => {
+    setActiveDropdown(activeDropdown === menu ? null : menu);
+  };
+
+  useEffect(() => {
+    const socketInstance = io(
+      "https://mobily-backend-production.up.railway.app/",
+      {
+        transports: ["websocket", "polling"], // Allow WebSocket and polling
+        withCredentials: true, // Ensures CORS works properly
+      }
+    );
+    setSocket(socketInstance);
+
+    return () => {
+      socketInstance.disconnect();
+    };
+  }, []);
+
+  const handleMenuClick = (url) => {
+    if (socket) {
+      console.log("Emitting navigate with link:", url);
+      socket.emit("navigate", { link: url });
+    } else {
+      console.log("Socket not initialized yet");
+    }
+  };
+  return (
+    <div className="flex justify-between items-center w-full h-[100vh] bg-[#050e59] text-white p-20">
+      <div className="absolute bottom-0 right-0">
+        <video autoPlay loop playsInline muted>
+          <source src="/bgvideo.mp4" />
+        </video>
+      </div>
+    </div>
+  );
+};
 
 const ViewScreen = () => {
   const [socket, setSocket] = useState(null);
@@ -65,6 +101,7 @@ const ViewScreen = () => {
     "/submarine-rcn": <RCN />,
     "/submarine-mobily": <MobileCable />,
     "/internet-gateways": <InternetGateways />,
+    "/home": <DefaultScreen />,
   };
 
   return <div>{pageComponents[currentPage] || <DefaultScreen />}</div>;
