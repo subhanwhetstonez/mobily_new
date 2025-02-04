@@ -18,13 +18,16 @@ import SMW from "./SMW";
 import TGNCable from "./TGNCable";
 import RCN from "./RCN";
 import MobileCable from "./MobileCable";
+import InternetGateways from "./InternetGateway";
 
 const ViewScreen = () => {
   const [socket, setSocket] = useState(null);
   const [currentPage, setCurrentPage] = useState("/view");
 
   useEffect(() => {
-    const socketInstance = io("https://mobily-backend-production.up.railway.app/");
+    const socketInstance = io(
+      "https://mobily-backend-production.up.railway.app/"
+    );
     setSocket(socketInstance);
 
     socketInstance.emit("joinRoom", currentPage);
@@ -122,6 +125,11 @@ const ViewScreen = () => {
     "/submarine-mobily": (
       <div>
         <MobileCable />
+      </div>
+    ),
+    "/internet-gateways": (
+      <div>
+        <InternetGateways />
       </div>
     ),
   };

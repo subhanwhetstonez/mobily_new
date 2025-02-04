@@ -15,18 +15,23 @@ const AAE1Cable = () => {
             <AnimatedDiv title={"25,000 Km"} subtitle={"Submarine Cable"} />
           </div>
           <div>
-            <AnimatedDiv title={"25,000 Km"} subtitle={"Submarine Cable"} />
+            <AnimatedDiv title={"4/5"} subtitle={"Number of Fiber Pair"} />
           </div>
           <div>
-            <AnimatedDiv title={"25,000 Km"} subtitle={"Submarine Cable"} />
+            <AnimatedDiv title={"80"} subtitle={"Initial Design WL per FB"} />
           </div>
           <div>
-            <AnimatedDiv title={"25,000 Km"} subtitle={"Submarine Cable"} />
+            <AnimatedDiv
+              title={"100 bps"}
+              subtitle={"Wavelength Technology "}
+            />
           </div>
         </div>
       </div>
       <div className="flex justify-end">
-        <img src="/pages/aae1map.svg" />
+        <video autoPlay loop muted playsInline>
+          <source src="/pages/007.mp4" />
+        </video>
       </div>
     </div>
   );

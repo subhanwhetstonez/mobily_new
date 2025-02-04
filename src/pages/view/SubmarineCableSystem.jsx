@@ -2,7 +2,7 @@ import React from "react";
 
 const SubmarineCableSystem = () => {
   return (
-    <div>
+    <div className="bg-[#edf7ff]">
       <div>
         <img src="/pages/submarinecablemap.svg" width={"100%"} />
       </div>
