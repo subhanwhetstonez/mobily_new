@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Poppins } from "next/font/google";
 import React, { useEffect, useState } from "react";
 import { io } from "socket.io-client";
