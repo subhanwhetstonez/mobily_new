@@ -24,7 +24,7 @@ const ViewScreen = () => {
   const [currentPage, setCurrentPage] = useState("/view");
 
   useEffect(() => {
-    const socketInstance = io("http://192.168.0.109:8080");
+    const socketInstance = io("https://mobily-backend-production.up.railway.app/");
     setSocket(socketInstance);
 
     socketInstance.emit("joinRoom", currentPage);
