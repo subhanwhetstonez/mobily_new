@@ -19,7 +19,7 @@ const BorderPage = () => {
       </div>
       <div className="flex justify-center mt-[-120px] z-0">
         <video autoPlay loop muted playsInline width={"800px"}>
-          <source src="/pages/010.mp4" />
+          <source src="/pages/001.mp4" />
         </video>
       </div>
     </div>
