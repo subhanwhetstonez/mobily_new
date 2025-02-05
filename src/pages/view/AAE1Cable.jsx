@@ -26,7 +26,7 @@ const AAE1Cable = () => {
           </div>
         </div>
       </div>
-      <div className="absolute flex w-full mt-[-100px] justify-center z-0">
+      <div className="absolute flex w-full mt-[-40px] justify-center z-0">
         <video autoPlay loop muted playsInline height={"100px"} width={"900px"}>
           <source src="/pages/007.mp4" />
         </video>

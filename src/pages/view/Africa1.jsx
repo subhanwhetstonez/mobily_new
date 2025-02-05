@@ -4,7 +4,7 @@ import AnimatedDiv from "../components/AnimatedDiv";
 const Africa1 = () => {
   return (
     <div>
-      <div className="flex flex-col gap-14 px-[4vw] pt-[6vw] bg-[#edf7ff]">
+      <div className="relative flex flex-col gap-10 px-[4vw] pt-[3vw] bg-[#edf7ff] z-10">
         <div>
           <p className="text-[#005FA6] text-[2vw] font-[700] ">Africa1 (New)</p>
         </div>
@@ -26,7 +26,7 @@ const Africa1 = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-end">
+      <div className="flex justify-center mt-[-150px] z-0">
         <video autoPlay loop muted playsInline>
           <source src="/pages/003.mp4" />
         </video>
