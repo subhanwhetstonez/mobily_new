@@ -5,6 +5,7 @@
 
 body {
   font-family: Poppins;
+  background-color:#edf7ff;
 }
 ::-webkit-scrollbar {
   width: 7px;
