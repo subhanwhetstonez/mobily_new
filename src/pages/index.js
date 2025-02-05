@@ -18,7 +18,7 @@ export default function Home() {
 
   useEffect(() => {
     const socketInstance = io(
-      "http://localhost:8080/",
+      "https://mobily-backend-production.up.railway.app/",
       {
         transports: ["websocket", "polling"], // Allow WebSocket and polling
         withCredentials: true, // Ensures CORS works properly
