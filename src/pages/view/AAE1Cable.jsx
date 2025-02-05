@@ -3,7 +3,7 @@ import AnimatedDiv from "../components/AnimatedDiv";
 
 const AAE1Cable = () => {
   return (
-    <div className="bg-[#edf7ff]">
+    <div className="bg-[#edf7ff] overflow-hidden">
       <div className="relative flex flex-col gap-14 px-[4vw] pt-[2vw] z-10 overflow-hidden">
         <div>
           <p className="text-[#005FA6] text-[2vw] font-[700] ">AAE1 Cable</p>
@@ -26,8 +26,8 @@ const AAE1Cable = () => {
           </div>
         </div>
       </div>
-      <div className="absolute flex w-full mt-[-200px] justify-center z-0">
-        <video autoPlay loop muted playsInline>
+      <div className="absolute flex w-full mt-[-100px] justify-center z-0">
+        <video autoPlay loop muted playsInline height={"100px"} width={"900px"}>
           <source src="/pages/007.mp4" />
         </video>
       </div>
