@@ -242,7 +242,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 right-0">
+        <div className="absolute bottom-0 right-0 ">
           <video autoPlay loop playsInline muted>
             <source src="/bgvideo.mp4" />
           </video>

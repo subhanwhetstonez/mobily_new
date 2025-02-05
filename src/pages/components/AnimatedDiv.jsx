@@ -16,7 +16,7 @@ const AnimatedDiv = ({ title, subtitle }) => {
       initial={{ opacity: 0, y: -50 }} // Start hidden & above
       animate={isVisible ? { opacity: 1, y: 0 } : {}} // Trigger on state change
       transition={{ duration: 0.8, ease: "easeOut" }} // Smooth transition
-      className="w-[597px] bg-[#DBF0FF] border-b-[#005FA6] border-b-4 rounded-md py-[2vh] px-[6vw] h-[180px] flex items-center"
+      className="w-[607px] bg-[#DBF0FF] border-b-[#005FA6] border-b-4 rounded-md py-[3vh] px-[2vw] h-[180px] flex items-center"
     >
       <div>
         <p className="text-[#001424] text-[40px] font-[600]">{title}</p>
