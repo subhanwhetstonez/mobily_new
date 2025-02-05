@@ -71,7 +71,7 @@ const ViewScreen = () => {
 
   useEffect(() => {
     const socketInstance = io(
-      "http://localhost:8080/"
+      "https://mobily-backend-production.up.railway.app/"
     );
     setSocket(socketInstance);
 
