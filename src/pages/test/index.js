@@ -1,34 +1,29 @@
 import React from "react";
-import AnimatedDiv from "../components/AnimatedDiv";
 
-const TGNAsia = () => {
+const BorderPage = () => {
   return (
     <div>
-      <div className="relative z-10 flex flex-col gap-10 px-[4vw] pt-[4vw]">
-        <div>
-          <p className="text-[#005FA6] text-[30px] font-[700] ">
-            TGN-Euro Asia
-          </p>
+      <div className=" w-[100%] font-bold flex flex-col p-[4%] relative">
+        <div className="text-[#005FA6] text-[35px] mb-2">
+          Terrestrial & Cross Borders
         </div>
-        <div className="grid grid-cols-2 gap-4 self-baseline">
-          <div>
-            <AnimatedDiv title={"15,000 Km"} subtitle={"Submarine Cable"} />
-          </div>
-          <div>
-            <AnimatedDiv
-              title={"100 Gbps"}
-              subtitle={"Wave Length Techmology"}
-            />
-          </div>
+        <div
+          className="text-[#005FA6] w-[300px] h-[60px] bg-[#FFFFFF] text-[20px] font-semibold 
+        flex items-center justify-center mb-4"
+        >
+          Border Interconnect Point
+        </div>
+        <div className="text-[#005FA6] text-[35px] mb-8">
+          KSA Terrestrial Crossing
         </div>
       </div>
-      <div className="flex justify-center mt-[20px] z-0">
+      <div className="flex justify-center mt-[-120px] z-0">
         <video autoPlay loop muted playsInline width={"800px"}>
-          <source src="/pages/008.mp4" />
+          <source src="/pages/001.mp4" />
         </video>
       </div>
     </div>
   );
 };
 
-export default TGNAsia;
+export default BorderPage;
