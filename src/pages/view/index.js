@@ -22,18 +22,12 @@ import InternetGateways from "./InternetGateway";
 
 const DefaultScreen = () => {
   const [socket, setSocket] = useState(null);
-  const [activeDropdown, setActiveDropdown] = useState(null);
-
-  const handleDropdownToggle = (menu) => {
-    setActiveDropdown(activeDropdown === menu ? null : menu);
-  };
-
   useEffect(() => {
     const socketInstance = io(
       "https://mobily-backend-production.up.railway.app/",
       {
-        transports: ["websocket", "polling"], // Allow WebSocket and polling
-        withCredentials: true, // Ensures CORS works properly
+        transports: ["websocket", "polling"],
+        withCredentials: true,
       }
     );
     setSocket(socketInstance);
@@ -52,13 +46,22 @@ const DefaultScreen = () => {
     }
   };
   return (
-    <div className="flex justify-between items-center w-full h-[100vh] bg-[#050e59] text-white p-20">
-      <div className="absolute bottom-0 right-0">
-        <video autoPlay loop playsInline muted>
-          <source src="/bgvideo.mp4" />
-        </video>
-      </div>
-    </div>
+    <div className="relative w-full h-[100vh] overflow-hidden">
+    <video 
+      autoPlay 
+      loop 
+      muted 
+      playsInline 
+      style={{
+        background: 'url("/pages/globe_main.mp4")',
+        backgroundPosition:'center center',
+        backgroundSize: 'cover',
+      }}
+    >
+  </video>
+  </div>
+  
+
   );
 };
 
@@ -68,7 +71,7 @@ const ViewScreen = () => {
 
   useEffect(() => {
     const socketInstance = io(
-      "https://mobily-backend-production.up.railway.app/"
+      "http://localhost:8080/"
     );
     setSocket(socketInstance);
 
