@@ -4,7 +4,7 @@ import AnimatedDiv from "../components/AnimatedDiv";
 const AAE1Cable = () => {
   return (
     <div className="bg-[#edf7ff]">
-      <div className="relative flex flex-col gap-14 px-[4vw] pt-[6vw] z-10">
+      <div className="relative flex flex-col gap-14 px-[4vw] pt-[2vw] z-10 overflow-hidden">
         <div>
           <p className="text-[#005FA6] text-[2vw] font-[700] ">AAE1 Cable</p>
         </div>
