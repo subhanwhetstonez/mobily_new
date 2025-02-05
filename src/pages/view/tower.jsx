@@ -17,7 +17,7 @@ const Tower = () => {
           />
         </div>
 
-        <div className="absolute flex justify-end right-0">
+        <div className="absolute flex justify-end right-0 bottom-0">
           <img
             src="/pages/tower.svg"
             className=" flex items-center justify-center"
